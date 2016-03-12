@@ -10,8 +10,8 @@ private:
 	string description;
 public:
 	Room();
-	Room(string name, string description);
 	~Room();
 	string CheckName();
 	string CheckDescription();
+	void ModifyRoom(const string &name, const string &description);
 };

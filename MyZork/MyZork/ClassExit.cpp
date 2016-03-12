@@ -4,7 +4,7 @@ Exit::Exit()
 {
 
 };
-Exit::Exit(string name, string description)
+void Exit::ModifyExit(const string &name,  const string &description)
 {
 	this->name = name;
 	this->description = description;

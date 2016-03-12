@@ -10,8 +10,8 @@ private:
 	string description;
 public:
 	Exit();
-	Exit(string name, string description);
 	~Exit();
 	string CheckName();
 	string CheckDescription();
+	void ModifyExit(const string &name, const string &description);
 };

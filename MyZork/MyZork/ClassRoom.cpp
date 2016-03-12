@@ -4,7 +4,7 @@ Room::Room()
 {
 
 }
-Room::Room(string name, string description)
+void Room::ModifyRoom(const string &name, const string &description)
 {
 	this->name = name;
 	this->description = description;

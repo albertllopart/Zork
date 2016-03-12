@@ -8,10 +8,13 @@ class Player
 private:
 	string name;
 	string description;
+	int position;
+	enum location {Hall};
 public:
 	Player();
-	Player(string name, string description);
 	~Player();
 	string CheckName();
 	string CheckDescription();
+	int CheckPosition();
+	void ModifyName(const string &name);
 };

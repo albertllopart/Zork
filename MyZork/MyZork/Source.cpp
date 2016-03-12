@@ -1,60 +1,29 @@
 #include <stdio.h>
-#include "header.h"
+#include "ClassWorld.h"
 
 int main()
 {
-	char command[25];
+	World dungeon;
+	Player adventurer;
+	string advName;
 
-	do
+	cout << "What's your name?" << endl;
+	cin >> advName;
+	adventurer.ModifyName(advName);
+
+	cout << "Si miri bona nit" << endl;
+
+	bool playing = true;
+
+	while (playing)
 	{
-		if ("open")
-		{
-			if ("north")
-			{
-				if (porta nord_n틆oom = false)
-				{
-					//porta nord_n틆oom = true
-				}
-				else
-				{
-					printf("North door is already open\n");
-				}
-			}
-			else if ("south")
-			{
-				if (porta sud_n틆oom = false)
-				{
-					//porta sud_n틆oom = true
-				}
-				else
-				{
-					printf("South door is already open\n");
-				}
-			}
-			else if ("east")
-			{
-				if (porta est_n틆oom = false)
-				{
-					//porta est_n틆oom = true
-				}
-				else
-				{
-					printf("East door is already open\n");
-				}
-			}
-			else if ("west")
-			{
-				if (porta oest_n틆oom = false)
-				{
-					//porta oest_n틆oom = true
-				}
-				else
-				{
-					printf("West door is already open\n");
-				}
-			}
-		}
-		if ("go")
+		cout << "fes algo nen" << endl;
+		string instruction;
+		int dir = 0;
+		cin >> instruction;
+		Command command;
+		command.ReadInstruction(instruction, dir);
 
-	} while (char command != "exit");
+		if (dir == -1) playing = false;
+	}
 }

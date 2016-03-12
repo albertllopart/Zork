@@ -2,12 +2,8 @@
 
 Player::Player()
 {
-
-};
-Player::Player(string name, string description)
-{
-	this->name = name;
-	this->description = description;
+	description = "soc un puto amo";
+	position = Hall;
 }
 string Player::CheckName()
 {
@@ -16,5 +12,13 @@ string Player::CheckName()
 string Player::CheckDescription()
 {
 	return description;
+}
+int Player::CheckPosition()
+{
+	return position;
+}
+void Player::ModifyName(const string &name)
+{
+	this->name = name;
 }
 Player::~Player(){};
