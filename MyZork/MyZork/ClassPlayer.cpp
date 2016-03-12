@@ -1,6 +1,5 @@
 #include "ClassPlayer.h"
 
-
 Player::Player()
 {
 

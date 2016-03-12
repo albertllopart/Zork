@@ -64,12 +64,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClassExit.cpp" />
     <ClCompile Include="ClassPlayer.cpp" />
     <ClCompile Include="ClassRoom.cpp" />
     <ClCompile Include="ClassWorld.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClassExit.h" />
     <ClInclude Include="ClassPlayer.h" />
     <ClInclude Include="ClassRoom.h" />
     <ClInclude Include="ClassWorld.h" />
