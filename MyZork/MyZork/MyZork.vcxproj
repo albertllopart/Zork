@@ -64,11 +64,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Func.cpp" />
+    <ClCompile Include="ClassPlayer.cpp" />
+    <ClCompile Include="ClassRoom.cpp" />
+    <ClCompile Include="ClassWorld.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="ClassPlayer.h" />
+    <ClInclude Include="ClassRoom.h" />
+    <ClInclude Include="ClassWorld.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
