@@ -13,13 +13,12 @@ int main()
 	cin >> advName;
 	adventurer.ModifyName(advName);
 
-	cout << "Si miri bona nit" << endl;
+	cout << "Introduction" << endl;
 
 	bool playing = true;
 
 	while (playing)
 	{
-		cout << "fes algo nen" << endl;
 		string instruction;
 		int dir = -1;
 		cin >> instruction;

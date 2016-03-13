@@ -7,8 +7,8 @@
 class World
 {
 private:
-	Room rooms[5];
-	Exit exits[4];
+	Room rooms[12];
+	Exit exits[11];
 	
 public:
 	void CheckRoom(int i);
