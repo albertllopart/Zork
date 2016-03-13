@@ -64,19 +64,35 @@ void World::Execute(string instruction, int dir, int &position)
 	}
 	else if (instruction == "go")
 	{
-		if (rooms[position].CheckOptions(dir) != -1)
+		if (rooms[position].CheckOptions(dir) != -1 && exits[rooms[position].CheckDoors(dir)].IsOpen())
 		{
 			position = rooms[position].CheckOptions(dir);
 			cout << rooms[position].CheckName() << endl << rooms[position].CheckDescription() << endl;
 		}
+		else if (rooms[position].CheckOptions(dir) == -1)
+		{
+			cout << "There's no room in that direction" << endl;
+		}
+		else
+		{
+			cout << "The door is closed" << endl;
+		}
 	}
 	else if (instruction == "open")
 	{
-
+		if (rooms[position].CheckDoors(dir) != -1 && exits[rooms[position].CheckDoors(dir)].IsOpen() == false)
+		{
+			exits[rooms[position].CheckDoors(dir)].ModifyState();
+			cout << "The door is now open" << endl;
+		}
 	}
 	else if (instruction == "close")
 	{
-
+		if (rooms[position].CheckDoors(dir) != -1 && exits[rooms[position].CheckDoors(dir)].IsOpen())
+		{
+			exits[rooms[position].CheckDoors(dir)].ModifyState();
+			cout << "The door is now closed" << endl;
+		}
 	}
 }
 World::~World(){}

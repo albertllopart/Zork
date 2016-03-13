@@ -2,12 +2,21 @@
 
 Exit::Exit()
 {
-
+	open = true;
 };
 void Exit::ModifyExit(const string &name,  const string &description)
 {
 	this->name = name;
 	this->description = description;
+}
+bool Exit::IsOpen()
+{
+	return open;
+}
+void Exit::ModifyState()
+{
+	if (open) open = false;
+	else open = true;
 }
 string Exit::CheckName()
 {
