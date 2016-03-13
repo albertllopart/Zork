@@ -17,4 +17,5 @@ public:
 	string CheckDescription();
 	int CheckPosition();
 	void ModifyName(const string &name);
+	void ModifyPosition(int next);
 };

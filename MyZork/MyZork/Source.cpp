@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "ClassWorld.h"
 
+
+
 int main()
 {
 	World dungeon;
@@ -19,11 +21,16 @@ int main()
 	{
 		cout << "fes algo nen" << endl;
 		string instruction;
-		int dir = 0;
+		int dir = -1;
 		cin >> instruction;
-		Command command;
-		command.ReadInstruction(instruction, dir);
-
-		if (dir == -1) playing = false;
+		if (instruction == "quit") playing = false;
+		else
+		{
+			Command command;
+			command.ReadInstruction(instruction, dir);
+			int position = adventurer.CheckPosition();
+			dungeon.Execute(instruction, dir, position);
+			adventurer.ModifyPosition(position);
+		}
 	}
 }

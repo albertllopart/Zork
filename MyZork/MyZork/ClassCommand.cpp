@@ -7,20 +7,15 @@ void Command::ReadInstruction(const string instr, int &dir)
 		cout << "ajuda xd" << endl;
 		dir = stay;
 	}
-	else if (instr == "quit")
-	{
-		cout << "dw" << endl;
-		dir = quit;
-	}
 	else if (instr == "look")
 	{
 		string dire;
 		cin >> dire;
 
-		if (dire == "north") dir = looknorth;
-		else if (dire == "south") dir = looksouth;
-		else if (dire == "east") dir = lookeast;
-		else if (dire == "west") dir = lookwest;
+		if (dire == "north") dir = north;
+		else if (dire == "south") dir = south;
+		else if (dire == "east") dir = east;
+		else if (dire == "west") dir = west;
 		else
 		{
 			dir = stay;
@@ -32,10 +27,10 @@ void Command::ReadInstruction(const string instr, int &dir)
 		string dire;
 		cin >> dire;
 
-		if (dire == "north") dir = gonorth;
-		else if (dire == "south") dir = gosouth;
-		else if (dire == "east") dir = goeast;
-		else if (dire == "west") dir = gowest;
+		if (dire == "north") dir = north;
+		else if (dire == "south") dir = south;
+		else if (dire == "east") dir = east;
+		else if (dire == "west") dir = west;
 		else
 		{
 			dir = stay;
@@ -47,10 +42,10 @@ void Command::ReadInstruction(const string instr, int &dir)
 		string dire;
 		cin >> dire;
 
-		if (dire == "north") dir = opennorth;
-		else if (dire == "south") dir = opensouth;
-		else if (dire == "east") dir = openeast;
-		else if (dire == "west") dir = openwest;
+		if (dire == "north") dir = north;
+		else if (dire == "south") dir = south;
+		else if (dire == "east") dir = east;
+		else if (dire == "west") dir = west;
 		else
 		{
 			dir = stay;
@@ -62,10 +57,10 @@ void Command::ReadInstruction(const string instr, int &dir)
 		string dire;
 		cin >> dire;
 
-		if (dire == "north") dir = closenorth;
-		else if (dire == "south") dir = closesouth;
-		else if (dire == "east") dir = closeeast;
-		else if (dire == "west") dir = closewest;
+		if (dire == "north") dir = north;
+		else if (dire == "south") dir = south;
+		else if (dire == "east") dir = east;
+		else if (dire == "west") dir = west;
 		else
 		{
 			dir = stay;

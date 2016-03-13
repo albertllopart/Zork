@@ -6,7 +6,7 @@ using namespace std;
 class Command
 {
 private:
-	enum dir {quit = -1, stay, looknorth, looksouth, lookeast, lookwest, gonorth, gosouth, goeast, gowest, opennorth, opensouth, openeast, openwest, closenorth, closesouth, closeeast, closewest};
+	enum dir {stay = -1, north, south, east, west};
 public:
 	Command(){};
 	~Command(){};

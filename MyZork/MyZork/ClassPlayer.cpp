@@ -21,4 +21,8 @@ void Player::ModifyName(const string &name)
 {
 	this->name = name;
 }
+void Player::ModifyPosition(int next)
+{
+	position = next;
+}
 Player::~Player(){};

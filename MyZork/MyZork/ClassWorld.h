@@ -11,6 +11,8 @@ private:
 	Exit exits[4];
 	
 public:
+	void CheckRoom(int i);
+	void Execute(string instruction, int dir, int &position);
 	World();
 	~World();
 };
