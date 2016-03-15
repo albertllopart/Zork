@@ -6,15 +6,13 @@ using namespace std;
 class Exit
 {
 private:
-	string name;
-	string description;
+	char* description = nullptr;
 	bool open;
 public:
 	Exit();
-	~Exit();
-	string CheckName();
-	string CheckDescription();
-	void ModifyExit(const string &name, const string &description);
+	char* CheckDescription();
+	void ModifyExit(char description[250]);
 	bool IsOpen();
 	void ModifyState();
+	~Exit();
 };

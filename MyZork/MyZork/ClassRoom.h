@@ -6,20 +6,20 @@ using namespace std;
 class Room
 {
 private:
-	string name;
-	string description;
+	char* name = nullptr;
+	char* description = nullptr;
 	int options[4];
 	int doors[4];
 
 public:
 	Room();
-	~Room();
-	string CheckName();
-	string CheckDescription();
-	void ModifyRoom(const string &name, const string &description);
+	char* CheckName();
+	char* CheckDescription();
+	void ModifyRoom(char nam[25], char descriptio[250]);
 	void ModifyOptions(int n, int s, int e, int w);
 	void ModifyDoors(int n, int s, int e, int w);
 	int CheckOptions(int dir);
 	int CheckDoors(int dir);
+	~Room();
 };
 

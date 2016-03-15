@@ -9,6 +9,6 @@ private:
 	enum dir {stay = -1, north, south, east, west};
 public:
 	Command(){};
+	void ReadInstruction(char instr[25], int &dir);
 	~Command(){};
-	void ReadInstruction(const string instr, int &dir);
 };

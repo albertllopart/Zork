@@ -7,22 +7,25 @@ int main()
 {
 	World dungeon;
 	Player adventurer;
-	string advName;
+	dungeon.CreateWorld();
+	char advName[25];
 
-	cout << "What's your name?" << endl;
-	cin >> advName;
+	cout << "Use the 'help' command to see your action options during the game" << endl << endl;
+	cout << "Enter your name" << endl;
+	gets_s(advName);
 	adventurer.ModifyName(advName);
 
-	cout << "Introduction" << endl;
+	cout << endl << "You wake up in a strange place you can't recognize. You can't remember what you were doing before falling unconscious." << endl << endl;
+	dungeon.CheckRoom(0);
 
 	bool playing = true;
 
 	while (playing)
 	{
-		string instruction;
+		char instruction[25];
 		int dir = -1;
-		cin >> instruction;
-		if (instruction == "quit") playing = false;
+		gets_s(instruction);
+		if (strcmp(instruction, "quit") == 0) playing = false;
 		else
 		{
 			Command command;

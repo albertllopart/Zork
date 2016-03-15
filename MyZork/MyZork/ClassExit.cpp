@@ -2,11 +2,11 @@
 
 Exit::Exit()
 {
-	open = true;
+	description = new char[250];
+	open = false;
 };
-void Exit::ModifyExit(const string &name,  const string &description)
+void Exit::ModifyExit(char description[250])
 {
-	this->name = name;
 	this->description = description;
 }
 bool Exit::IsOpen()
@@ -18,12 +18,11 @@ void Exit::ModifyState()
 	if (open) open = false;
 	else open = true;
 }
-string Exit::CheckName()
-{
-	return name;
-}
-string Exit::CheckDescription()
+char* Exit::CheckDescription()
 {
 	return description;
 }
-Exit::~Exit(){};
+Exit::~Exit()
+{
+	
+}

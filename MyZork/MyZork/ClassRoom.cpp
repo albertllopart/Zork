@@ -2,9 +2,10 @@
 
 Room::Room()
 {
-
+	name = new char[25];
+	description = new char[250];
 }
-void Room::ModifyRoom(const string &name, const string &description)
+void Room::ModifyRoom(char name[25], char description[250])
 {
 	this->name = name;
 	this->description = description;
@@ -31,12 +32,15 @@ int Room::CheckDoors(int dir)
 {
 	return doors[dir];
 }
-string Room::CheckName()
+char* Room::CheckName()
 {
 	return name;
 }
-string Room::CheckDescription()
+char* Room::CheckDescription()
 {
 	return description;
 }
-Room::~Room(){};
+Room::~Room()
+{
+	
+}

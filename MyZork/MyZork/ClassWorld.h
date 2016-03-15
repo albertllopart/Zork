@@ -7,12 +7,13 @@
 class World
 {
 private:
-	Room rooms[12];
-	Exit exits[11];
+	Room* rooms = nullptr;
+	Exit* exits = nullptr;
 	
 public:
-	void CheckRoom(int i);
-	void Execute(string instruction, int dir, int &position);
 	World();
+	void CreateWorld();
+	void CheckRoom(int i);
+	void Execute(char instruction[25], int dir, int &position);
 	~World();
 };
